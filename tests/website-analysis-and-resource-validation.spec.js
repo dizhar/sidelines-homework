@@ -49,6 +49,7 @@ import {
 test.describe("Website Analysis and Validation Task –", () => {
   test("should analyze performance, SEO, accessibility, and best practices", async ({}, testInfo) => {
     // Set test-level timeout to 3 minutes (60,000 ms)
+    test.setTimeout(60000);
     const url = "https://www.cbssports.com/betting";
     const reportsDir = path.resolve("./reports");
     const reportPath = path.join(reportsDir, "lighthouse-report.json");
