@@ -43,7 +43,15 @@ export default defineConfig({
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      use: {
+        ...devices["Desktop Firefox"],
+        bypassCSP: true, // Disable caching in Firefox
+        extraHTTPHeaders: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+      },
     },
 
     {

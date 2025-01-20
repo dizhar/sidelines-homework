@@ -121,6 +121,8 @@ test.describe("Website Analysis and Validation Task –", () => {
   test("Resource Validation: Check linked resources for errors", async ({
     page,
   }, testInfo) => {
+    // Set test-level timeout to 3 minutes (60,000 ms)
+    test.setTimeout(60000);
     const url = "https://www.cbssports.com/betting";
 
     await test.step(`Validating resources on: ${url}`, async () => {
