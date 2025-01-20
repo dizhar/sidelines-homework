@@ -2,7 +2,10 @@
   "name": "sidelines-homework",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test", 
+    "show-report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
